@@ -1,7 +1,7 @@
 # diffdev.io — homepage (user site)
 
 GitHub Pages **user site** repo. Local folder name `diffdev-home`; on GitHub it must be
-named `<username>.github.io` and it serves **https://diffdev.io/**.
+named `bruskiguy.github.io` and it serves **https://diffdev.io/**.
 
 - `CNAME` contains `diffdev.io` — this claims the custom domain for this GitHub account.
   Every other Pages project repo under the same account is then served under
