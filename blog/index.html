@@ -64,19 +64,32 @@ header.hero{padding:52px 0 34px;border-bottom:1px solid var(--line)}
 h1{color:var(--text);font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.15;letter-spacing:-.4px;margin-bottom:10px}
 .hero p{color:var(--muted);max-width:560px;font-size:1.02rem}
 section.posts{padding:38px 0 14px}
-.k{display:block;font-size:.75rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--sky);margin-bottom:16px}
-.card{display:block;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(56,189,248,.10),rgba(129,140,248,.08));text-decoration:none;color:var(--text);margin-bottom:16px;transition:transform .15s ease,border-color .15s ease}
+.list-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.k{font-size:.75rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--sky)}
+.rss{font-size:.85rem;color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line)}
+.rss:hover{color:var(--sky);border-color:var(--sky)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;padding:20px 22px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,rgba(56,189,248,.10),rgba(129,140,248,.08));text-decoration:none;color:var(--text);transition:transform .15s ease,border-color .15s ease}
 .card:hover{transform:translateY(-3px);border-color:var(--sky)}
-.card .c{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
-.card .tag{font-size:.72rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--sky);border:1px solid rgba(56,189,248,.35);border-radius:999px;padding:3px 10px}
-.card h2{font-size:1.22rem;font-weight:800;letter-spacing:-.2px;margin-bottom:6px}
-.card .d{color:var(--muted);font-size:.95rem;margin-bottom:10px;display:block}
-.card .m{color:var(--sky);font-size:.88rem;font-weight:700;display:block}
-.card.new{border-style:dashed;background:transparent;opacity:.75;cursor:default}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.tag{font-size:.72rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--sky);border:1px solid rgba(56,189,248,.35);border-radius:999px;padding:3px 10px}
+.card h2{font-size:1.22rem;font-weight:800;letter-spacing:-.2px;margin-bottom:8px}
+.card .d{color:var(--muted);font-size:.95rem;margin-bottom:18px;flex-grow:1}
+.card .meta{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+.avatar{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--sky),#818cf8);color:#0b1220;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0}
+.who{display:flex;flex-direction:column;line-height:1.35}
+.author{color:var(--text);font-weight:700;font-size:.92rem}
+.when{color:var(--muted);font-size:.8rem}
+.go{margin-left:auto;color:var(--sky);font-weight:800;font-size:1.1rem;transition:transform .15s ease}
+.card:hover .go{transform:translateX(3px)}
+.card.featured{grid-column:1/-1}
+.card.featured h2{font-size:1.45rem}
+.card.featured .d{font-size:1rem}
+.card.new{border-style:dashed;background:transparent;opacity:.72;cursor:default}
 .card.new:hover{transform:none;border-color:var(--line)}
 .card.new .tag{color:var(--muted);border-color:var(--line)}
-.card.new h2{font-size:1.08rem}
-.card.new .m{color:var(--muted)}
+.card.new h2{font-size:1.05rem}
+.card.new .m{margin-top:auto;color:var(--muted);font-size:.85rem;font-weight:700}
 footer{margin-top:34px;padding:26px 0 34px;border-top:1px solid var(--line)}
 footer .frow{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.9rem;color:var(--muted)}
 footer a{color:var(--muted);text-decoration:none;border-bottom:1px dotted var(--line)}
@@ -105,22 +118,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </header>
   <section class="posts">
     <div class="wrap">
-      <span class="k">Latest posts</span>
-      <a class="card" href="/blog/best-open-source-seo-tools/">
-        <span class="c"><span class="tag">SEO</span><span class="tag">Open source</span></span>
-        <h2>Best Open Source SEO Tools</h2>
-        <span class="d">The open source SEO tools I would use today for crawling, analytics, rank tracking, and technical SEO — Google Search Console, LibreCrawl, SerpBear, Matomo, and Lighthouse.</span>
-        <span class="m">Caleb · Oct 10, 2026 · 9 min read →</span>
-      </a>
-      <div class="card new">
-        <span class="c"><span class="tag">Coming soon</span></span>
-        <h2>Developer tool comparisons</h2>
-        <span class="m">In progress</span>
+      <div class="list-head">
+        <span class="k">Latest posts</span>
+        <a class="rss" href="/blog/feed.xml">RSS feed</a>
       </div>
-      <div class="card new">
-        <span class="c"><span class="tag">Coming soon</span></span>
-        <h2>Marketing teardowns</h2>
-        <span class="m">In progress</span>
+      <div class="grid">
+        <a class="card featured" href="/blog/best-open-source-seo-tools/">
+          <div class="tags"><span class="tag">SEO</span><span class="tag">Open source</span></div>
+          <h2>Best Open Source SEO Tools</h2>
+          <p class="d">The open source SEO tools I would use today for crawling, analytics, rank tracking, and technical SEO — Google Search Console, LibreCrawl, SerpBear, Matomo, and Lighthouse.</p>
+          <div class="meta">
+            <span class="avatar">C</span>
+            <span class="who"><span class="author">Caleb</span><span class="when">Oct 10, 2026 · 9 min read</span></span>
+            <span class="go">→</span>
+          </div>
+        </a>
+        <div class="card new">
+          <div class="tags"><span class="tag">Coming soon</span></div>
+          <h2>Developer tool comparisons</h2>
+          <p class="d">Side-by-side reviews of the tools developers actually use — honest takes, real trade-offs, no affiliate fluff.</p>
+          <span class="m">In progress</span>
+        </div>
+        <div class="card new">
+          <div class="tags"><span class="tag">Coming soon</span></div>
+          <h2>Marketing teardowns</h2>
+          <p class="d">What works, what doesn't, and why — teardowns of real marketing sites, funnels, and campaigns.</p>
+          <span class="m">In progress</span>
+        </div>
       </div>
     </div>
   </section>
