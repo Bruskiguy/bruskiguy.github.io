@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>DiffDev.io Blog</title>
+    <link>https://diffdev.io/blog/</link>
+    <description>Developer tooling, open source SEO tools, and marketing teardowns — written from the builder's side.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Best Open Source SEO Tools</title>
+      <link>https://diffdev.io/blog/best-open-source-seo-tools/</link>
+      <guid isPermaLink="true">https://diffdev.io/blog/best-open-source-seo-tools/</guid>
+      <pubDate>Sat, 10 Oct 2026 12:00:00 GMT</pubDate>
+      <description>The open source SEO tools I would use today for crawling, analytics, rank tracking, and technical SEO.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,8 @@
+# diffdev.io — robots.txt
+# Sitemap: listed below. Blog post template is not a real page.
+
+User-agent: *
+Allow: /
+Disallow: /blog/_template.html
+
+Sitemap: https://diffdev.io/sitemap.xml
